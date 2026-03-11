@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporting Dashboard Sample | FASS Systems Consulting</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Dashboard-specific enhancements */
+    .dashboard-container {
+      background: #f8fafc;
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-lg);
+      border: 1px solid var(--color-border);
+    }
+    
+    .status-indicator {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+    
+    .status-green { background: #38a169; }
+    .status-yellow { background: #d69e2e; }
+    .status-blue { background: #3182ce; }
+    
+    .task-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.8125rem;
+    }
+    
+    .task-item:last-child {
+      border-bottom: none;
+    }
+    
+    .task-priority {
+      font-size: 0.6875rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+    
+    .priority-high {
+      background: rgba(229, 62, 62, 0.1);
+      color: #c53030;
+    }
+    
+    .priority-medium {
+      background: rgba(214, 158, 46, 0.1);
+      color: #b7791f;
+    }
+    
+    .priority-low {
+      background: rgba(56, 161, 105, 0.1);
+      color: #276749;
+    }
+    
+    .chart-placeholder {
+      height: 100px;
+      background: linear-gradient(180deg, transparent 0%, var(--color-surface) 100%);
+      border-radius: var(--radius-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .chart-bars {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      height: 100%;
+      padding: 10px;
+    }
+    
+    .chart-bar {
+      width: 20px;
+      background: var(--color-primary);
+      border-radius: 3px 3px 0 0;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="brand-name">FASS Systems Consulting</div>
+        <div class="brand-tagline">Maurice Nobles</div>
+      </div>
+      <div class="document-title">Dashboard Sample</div>
+    </header>
+
+    <!-- Main Title -->
+    <section class="section-compact">
+      <h1 class="page-title">Reporting Dashboard Sample</h1>
+      <p class="lead">Example of operations and reporting visibility structure for business workflow management.</p>
+    </section>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+      <!-- Dashboard Header -->
+      <div class="dashboard-header">
+        <div class="dashboard-title">Operations Overview</div>
+        <div class="dashboard-date">Sample Data — For Illustration Only</div>
+      </div>
+
+      <!-- KPI Row 1 -->
+      <div class="dashboard-grid mb-lg">
+        <div class="dashboard-card">
+          <div class="dashboard-card-header">
+            <div class="dashboard-card-title">Active Pipeline</div>
+            <div class="dashboard-card-icon">📊</div>
+          </div>
+          <div class="dashboard-metric">47</div>
+          <div class="dashboard-subtext">
+            <span class="status-indicator status-green"></span>
+            12 closing this week
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="dashboard-card-header">
+            <div class="dashboard-card-title">Follow-Ups Due</div>
+            <div class="dashboard-card-icon">📋</div>
+          </div>
+          <div class="dashboard-metric">18</div>
+          <div class="dashboard-subtext">
+            <span class="status-indicator status-yellow"></span>
+            5 overdue
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="dashboard-card-header">
+            <div class="dashboard-card-title">Compliance Milestones</div>
+            <div class="dashboard-card-icon">✓</div>
+          </div>
+          <div class="dashboard-metric">94<span class="dashboard-metric-unit">%</span></div>
+          <div class="dashboard-subtext">
+            <span class="status-indicator status-green"></span>
+            On track
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI Row 2 -->
+      <div class="dashboard-grid mb-lg">
+        <div class="dashboard-card">
+          <div class="dashboard-card-header">
+            <div class="dashboard-card-title">Funding Count (MTD)</div>
+            <div class="dashboard-card-icon">💰</div>
+          </div>
+          <div class="dashboard-metric">23</div>
+          <div class="dashboard-subtext">
+            <span class="status-indicator status-green"></span>
+            vs. 19 last month
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="dashboard-card-header">
+            <div class="dashboard-card-title">Task Completion Rate</div>
+            <div class="dashboard-card-icon">⚡</div>
+          </div>
+          <div class="dashboard-metric">87<span class="dashboard-metric-unit">%</span></div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width: 87%;"></div>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="dashboard-card-header">
+            <div class="dashboard-card-title">Avg. Days to Close</div>
+            <div class="dashboard-card-icon">📅</div>
+          </div>
+          <div class="dashboard-metric">32</div>
+          <div class="dashboard-subtext">
+            <span class="status-indicator status-blue"></span>
+            Target: 30 days
+          </div>
+        </div>
+      </div>
+
+      <!-- Two Column Section -->
+      <div class="grid grid-2 gap-md">
+        <!-- Pipeline by Stage -->
+        <div class="dashboard-card">
+          <div class="dashboard-card-header">
+            <div class="dashboard-card-title">Pipeline by Stage</div>
+          </div>
+          <div class="chart-placeholder">
+            <div class="chart-bars">
+              <div class="chart-bar" style="height: 40%;"></div>
+              <div class="chart-bar" style="height: 70%;"></div>
+              <div class="chart-bar" style="height: 90%;"></div>
+              <div class="chart-bar" style="height: 60%;"></div>
+              <div class="chart-bar" style="height: 45%;"></div>
+              <div class="chart-bar" style="height: 30%;"></div>
+            </div>
+          </div>
+          <div class="flex justify-between mt-sm" style="font-size: 0.6875rem; color: var(--color-text-muted);">
+            <span>App</span>
+            <span>Docs</span>
+            <span>UW</span>
+            <span>CTC</span>
+            <span>CD</span>
+            <span>Close</span>
+          </div>
+        </div>
+
+        <!-- Priority Tasks -->
+        <div class="dashboard-card">
+          <div class="dashboard-card-header">
+            <div class="dashboard-card-title">Priority Follow-Ups</div>
+          </div>
+          <ul class="task-list">
+            <li class="task-item">
+              <span>Borrower docs - File #1247</span>
+              <span class="task-priority priority-high">High</span>
+            </li>
+            <li class="task-item">
+              <span>UW conditions - File #1251</span>
+              <span class="task-priority priority-high">High</span>
+            </li>
+            <li class="task-item">
+              <span>Title follow-up - File #1238</span>
+              <span class="task-priority priority-medium">Medium</span>
+            </li>
+            <li class="task-item">
+              <span>Rate lock review - File #1255</span>
+              <span class="task-priority priority-medium">Medium</span>
+            </li>
+            <li class="task-item">
+              <span>Closing scheduled - File #1232</span>
+              <span class="task-priority priority-low">Low</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Reporting Snapshot -->
+      <div class="dashboard-card mt-md">
+        <div class="dashboard-card-header">
+          <div class="dashboard-card-title">Weekly Reporting Snapshot</div>
+        </div>
+        <table class="table-simple">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>This Week</th>
+              <th>Last Week</th>
+              <th>Trend</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>New Applications</td>
+              <td>14</td>
+              <td>11</td>
+              <td style="color: #38a169;">↑ +27%</td>
+            </tr>
+            <tr>
+              <td>Files Funded</td>
+              <td>8</td>
+              <td>6</td>
+              <td style="color: #38a169;">↑ +33%</td>
+            </tr>
+            <tr>
+              <td>Tasks Completed</td>
+              <td>142</td>
+              <td>128</td>
+              <td style="color: #38a169;">↑ +11%</td>
+            </tr>
+            <tr>
+              <td>Avg. Response Time</td>
+              <td>4.2 hrs</td>
+              <td>5.1 hrs</td>
+              <td style="color: #38a169;">↓ Better</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="note mt-lg">
+      <strong>Illustrative dashboard sample for operations and reporting visibility.</strong> This mockup demonstrates the type of reporting structure and KPI visibility that can be built for lending, real estate, and service operations. Actual metrics and design will be customized to your specific business needs.
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-text">FASS Systems Consulting | Maurice Nobles</p>
+    </footer>
+  </div>
+</body>
+</html>

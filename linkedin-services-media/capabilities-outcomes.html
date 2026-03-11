@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What I Help Clients Improve | FASS Systems Consulting</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-lg);
+    }
+    
+    .outcome-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .outcome-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--color-primary);
+    }
+    
+    .outcome-icon {
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .outcome-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .outcome-description {
+      font-size: 0.875rem;
+      color: var(--color-secondary);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .outcome-impact {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    
+    .capabilities-section {
+      background: var(--color-primary);
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      margin: var(--spacing-xl) 0;
+    }
+    
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .capability-item {
+      text-align: center;
+      padding: var(--spacing-md);
+    }
+    
+    .capability-item h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-xs);
+      color: white;
+    }
+    
+    .capability-item p {
+      font-size: 0.75rem;
+      opacity: 0.85;
+      margin: 0;
+      color: rgba(255,255,255,0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="brand-name">FASS Systems Consulting</div>
+        <div class="brand-tagline">Maurice Nobles</div>
+      </div>
+      <div class="document-title">Capabilities &amp; Outcomes</div>
+    </header>
+
+    <!-- Main Title -->
+    <section class="section-compact">
+      <h1 class="page-title">What I Help Clients Improve</h1>
+      <p class="lead">Practical, measurable improvements to how your business operates—focused on visibility, accountability, and execution.</p>
+    </section>
+
+    <!-- Outcomes Grid -->
+    <section class="section">
+      <div class="outcome-grid">
+        <div class="outcome-card">
+          <div class="outcome-icon">📊</div>
+          <div class="outcome-title">Clearer Workflow Visibility</div>
+          <div class="outcome-description">See where every project, file, or task stands at any moment. No more digging through emails or asking for status updates.</div>
+          <div class="outcome-impact">Potential impact: Reduced time spent searching for information</div>
+        </div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon">⚡</div>
+          <div class="outcome-title">Faster Follow-Up</div>
+          <div class="outcome-description">Structured reminder systems and follow-up queues ensure nothing falls through the cracks and deadlines are met.</div>
+          <div class="outcome-impact">Potential impact: Fewer missed deadlines and delayed responses</div>
+        </div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon">📈</div>
+          <div class="outcome-title">Stronger Reporting Consistency</div>
+          <div class="outcome-description">Regular, reliable reporting that tells you what's working, what's not, and where to focus attention.</div>
+          <div class="outcome-impact">Potential impact: Better decision-making with accurate data</div>
+        </div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon">✓</div>
+          <div class="outcome-title">Improved Accountability</div>
+          <div class="outcome-description">Clear ownership of tasks and milestones so everyone knows who is responsible for what—and when.</div>
+          <div class="outcome-impact">Potential impact: Less finger-pointing, more ownership</div>
+        </div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon">🏗️</div>
+          <div class="outcome-title">Cleaner Operational Structure</div>
+          <div class="outcome-description">Well-documented processes and workflows that new team members can follow and existing staff can rely on.</div>
+          <div class="outcome-impact">Potential impact: Smoother onboarding and consistent execution</div>
+        </div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon">📐</div>
+          <div class="outcome-title">More Scalable Execution</div>
+          <div class="outcome-description">Systems that grow with your business instead of becoming bottlenecks as volume increases.</div>
+          <div class="outcome-impact">Potential impact: Handle more work without proportional overhead</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="capabilities-section">
+      <h2 style="text-align: center; margin-bottom: var(--spacing-sm); font-size: 1.25rem;">Core Capabilities</h2>
+      <p style="text-align: center; opacity: 0.9; font-size: 0.875rem;">What I bring to every engagement</p>
+      
+      <div class="capabilities-grid">
+        <div class="capability-item">
+          <h4>Process Mapping</h4>
+          <p>Document and visualize how work flows through your organization</p>
+        </div>
+        <div class="capability-item">
+          <h4>Dashboard Design</h4>
+          <p>Build reporting structures that surface the right metrics</p>
+        </div>
+        <div class="capability-item">
+          <h4>Workflow Automation</h4>
+          <p>Reduce manual work with smart triggers and reminders</p>
+        </div>
+        <div class="capability-item">
+          <h4>Tool Configuration</h4>
+          <p>Set up and customize the systems your team uses daily</p>
+        </div>
+        <div class="capability-item">
+          <h4>SOP Development</h4>
+          <p>Create clear documentation teams can actually follow</p>
+        </div>
+        <div class="capability-item">
+          <h4>Training &amp; Adoption</h4>
+          <p>Ensure new processes stick through hands-on support</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="section-compact">
+      <h2 class="section-title">My Approach</h2>
+      <div class="grid grid-2 gap-md">
+        <div>
+          <h4 class="section-subtitle">Start With Reality</h4>
+          <p class="small muted">I assess where you actually are—not where you think you should be. Honest diagnostics lead to practical solutions.</p>
+        </div>
+        <div>
+          <h4 class="section-subtitle">Build for Adoption</h4>
+          <p class="small muted">The best system is one your team will actually use. I prioritize practical implementation over theoretical perfection.</p>
+        </div>
+        <div>
+          <h4 class="section-subtitle">Focus on Quick Wins</h4>
+          <p class="small muted">Early momentum matters. I identify improvements that can show results quickly while building toward larger goals.</p>
+        </div>
+        <div>
+          <h4 class="section-subtitle">Stay for Implementation</h4>
+          <p class="small muted">I don't just hand over a report. I work alongside your team to make sure changes are actually implemented and working.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta">
+      <div class="cta-title">Ready to Improve Your Operations?</div>
+      <p class="cta-text">Let's discuss which outcomes matter most to your business and how I can help you achieve them.</p>
+      <div class="cta-contact">Connect with Maurice Nobles on LinkedIn</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-text">FASS Systems Consulting | Maurice Nobles</p>
+    </footer>
+  </div>
+</body>
+</html>

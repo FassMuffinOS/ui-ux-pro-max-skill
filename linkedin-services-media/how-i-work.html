@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Work | FASS Systems Consulting</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Enhanced process visualization */
+    .process-container {
+      background: linear-gradient(135deg, var(--color-surface) 0%, #edf2f7 100%);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-2xl) var(--spacing-xl);
+      margin: var(--spacing-xl) 0;
+    }
+    
+    .process-steps {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+    }
+    
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 2.25rem;
+      left: 10%;
+      right: 10%;
+      height: 3px;
+      background: var(--color-border);
+      z-index: 0;
+    }
+    
+    .step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      max-width: 140px;
+    }
+    
+    .step-icon {
+      width: 4.5rem;
+      height: 4.5rem;
+      background: var(--color-primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 auto var(--spacing-md);
+      box-shadow: 0 4px 14px rgba(26, 54, 93, 0.3);
+      border: 4px solid white;
+    }
+    
+    .step-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .step-desc {
+      font-size: 0.8125rem;
+      color: var(--color-secondary);
+      line-height: 1.5;
+    }
+    
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-xl);
+    }
+    
+    .detail-card {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-md);
+      text-align: center;
+    }
+    
+    .detail-card h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .detail-card ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+    
+    .detail-card li {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-bottom: 4px;
+      padding-left: 1rem;
+      position: relative;
+    }
+    
+    .detail-card li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+    }
+    
+    .approach-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-xl);
+    }
+    
+    .approach-card {
+      padding: var(--spacing-lg);
+    }
+    
+    .approach-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-md);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+    
+    .approach-card h3::before {
+      content: "→";
+      color: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="brand-name">FASS Systems Consulting</div>
+        <div class="brand-tagline">Maurice Nobles</div>
+      </div>
+      <div class="document-title">Process</div>
+    </header>
+
+    <!-- Main Title -->
+    <section class="section-compact">
+      <h1 class="page-title">How I Work</h1>
+      <p class="lead">A structured, practical approach to improving your operations—from assessment through implementation and continuous improvement.</p>
+    </section>
+
+    <!-- Process Visualization -->
+    <div class="process-container">
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-icon">1</div>
+          <div class="step-name">Assess</div>
+          <div class="step-desc">Understand your current state</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">2</div>
+          <div class="step-name">Organize</div>
+          <div class="step-desc">Define structure and ownership</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">3</div>
+          <div class="step-name">Build</div>
+          <div class="step-desc">Create practical tools</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">4</div>
+          <div class="step-name">Track</div>
+          <div class="step-desc">Monitor progress and visibility</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">5</div>
+          <div class="step-name">Improve</div>
+          <div class="step-desc">Refine and scale</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed Steps -->
+    <div class="details-grid">
+      <div class="detail-card">
+        <h4>Assess</h4>
+        <ul>
+          <li>Review workflows</li>
+          <li>Identify gaps</li>
+          <li>Map pain points</li>
+          <li>Understand goals</li>
+        </ul>
+      </div>
+      <div class="detail-card">
+        <h4>Organize</h4>
+        <ul>
+          <li>Define priorities</li>
+          <li>Assign ownership</li>
+          <li>Structure processes</li>
+          <li>Set milestones</li>
+        </ul>
+      </div>
+      <div class="detail-card">
+        <h4>Build</h4>
+        <ul>
+          <li>Create dashboards</li>
+          <li>Set up tracking</li>
+          <li>Document SOPs</li>
+          <li>Configure tools</li>
+        </ul>
+      </div>
+      <div class="detail-card">
+        <h4>Track</h4>
+        <ul>
+          <li>Monitor progress</li>
+          <li>Follow-up cadence</li>
+          <li>Report visibility</li>
+          <li>Accountability</li>
+        </ul>
+      </div>
+      <div class="detail-card">
+        <h4>Improve</h4>
+        <ul>
+          <li>Analyze results</li>
+          <li>Refine processes</li>
+          <li>Scale what works</li>
+          <li>Continuous gains</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Approach Section -->
+    <div class="approach-section">
+      <div class="card approach-card">
+        <h3>Hands-On, Not Hands-Off</h3>
+        <p class="small muted">I don't just provide recommendations and walk away. I work alongside your team to implement changes, configure tools, and ensure adoption actually happens.</p>
+      </div>
+      <div class="card approach-card">
+        <h3>Practical Over Perfect</h3>
+        <p class="small muted">The goal isn't to build an ideal system on paper—it's to create something your team will actually use and benefit from every day.</p>
+      </div>
+      <div class="card approach-card">
+        <h3>Structure Creates Freedom</h3>
+        <p class="small muted">When workflows are clear and responsibilities are defined, your team spends less time figuring out what to do and more time doing it.</p>
+      </div>
+      <div class="card approach-card">
+        <h3>Visibility Drives Decisions</h3>
+        <p class="small muted">Good reporting isn't about more data—it's about seeing the right information at the right time to make confident decisions.</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <div class="cta-title">Ready to Get Started?</div>
+      <p class="cta-text">Let's talk about where you are today and where you want your operations to be.</p>
+      <div class="cta-contact">Connect with Maurice Nobles on LinkedIn</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-text">FASS Systems Consulting | Maurice Nobles</p>
+    </footer>
+  </div>
+</body>
+</html>
