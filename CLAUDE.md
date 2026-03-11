@@ -20,6 +20,8 @@ python3 src/ui-ux-pro-max/scripts/search.py "<query>" --domain <domain> [-n <max
 - `landing` - Page structure and CTA strategies
 - `chart` - Chart types and library recommendations
 - `ux` - Best practices and anti-patterns
+- `assets` - Reusable UI component patterns (buttons, cards, modals, navigation)
+- `reactive` - React state management and interactivity patterns (hooks, effects, optimizations)
 
 **Stack search:**
 ```bash
