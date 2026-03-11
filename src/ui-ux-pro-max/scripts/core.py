@@ -69,6 +69,16 @@ CSV_CONFIG = {
         "file": "google-fonts.csv",
         "search_cols": ["Family", "Category", "Stroke", "Classifications", "Keywords", "Subsets", "Designers"],
         "output_cols": ["Family", "Category", "Stroke", "Classifications", "Styles", "Variable Axes", "Subsets", "Designers", "Popularity Rank", "Google Fonts URL"]
+    },
+    "assets": {
+        "file": "assets.csv",
+        "search_cols": ["Category", "Asset Name", "Keywords", "Description", "Best For"],
+        "output_cols": ["Category", "Asset Name", "Keywords", "Description", "Code Snippet", "Best For", "Framework", "Complexity", "Accessibility"]
+    },
+    "reactive": {
+        "file": "reactive.csv",
+        "search_cols": ["Category", "Pattern Name", "Keywords", "Description", "Best Practices"],
+        "output_cols": ["Category", "Pattern Name", "Keywords", "Description", "State Management", "Best Practices", "Code Example", "Anti-Patterns", "Framework", "Accessibility Notes"]
     }
 }
 
@@ -195,7 +205,9 @@ def detect_domain(query):
         "google-fonts": ["google font", "font family", "font weight", "font style", "variable font", "noto", "font for", "find font", "font subset", "font language", "monospace font", "serif font", "sans serif font", "display font", "handwriting font", "font", "typography", "serif", "sans"],
         "icons": ["icon", "icons", "lucide", "heroicons", "symbol", "glyph", "pictogram", "svg icon"],
         "react": ["react", "next.js", "nextjs", "suspense", "memo", "usecallback", "useeffect", "rerender", "bundle", "waterfall", "barrel", "dynamic import", "rsc", "server component"],
-        "web": ["aria", "focus", "outline", "semantic", "virtualize", "autocomplete", "form", "input type", "preconnect"]
+        "web": ["aria", "focus", "outline", "semantic", "virtualize", "autocomplete", "form", "input type", "preconnect"],
+        "assets": ["asset", "component", "button", "card", "input", "modal", "dialog", "nav", "navbar", "sidebar", "alert", "toast", "badge", "table", "list", "avatar", "snippet", "code", "skeleton"],
+        "reactive": ["reactive", "state", "hook", "usestate", "effect", "pattern", "interactivity", "realtime", "websocket", "debounce", "throttle", "virtualization", "optimistic", "controlled", "provider"]
     }
 
     scores = {domain: sum(1 for kw in keywords if re.search(r'\b' + re.escape(kw) + r'\b', query_lower)) for domain, keywords in domain_keywords.items()}
